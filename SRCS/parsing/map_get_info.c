@@ -50,9 +50,9 @@ void	get_backgroud(t_game *game, char **map_brut)
 		i++;
 	while (init != 2)
 	{
-		if (map_brut[i][0] == 'F')
+		if (map_brut[i][0] == 'F' || map_brut[i][0] == 'C')
 			game->floor = get_hexa(map_brut[i++]);
-		if (map_brut[i][0] == 'C')
+		if (map_brut[i][0] == 'C' || map_brut[i][0] == 'F')
 			game->ceiling = get_hexa(map_brut[i++]);
 		if (game->ceiling == -1 || game->floor == -1)
 		{
